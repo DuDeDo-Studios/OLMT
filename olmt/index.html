@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Lane Monster Train</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row row-cols-8 g-4" id="lane">
+        <div class="col">
+          <div class="card">
+            <div class="card-body" id="score1">
+            </div>
+            <p id="mana" ></p>
+          </div>
+        </div>
+        <div class="col player">
+          <div class="card">
+            <div class="card-body" id="card4" onclick="applySpell(3)">
+            </div>
+          </div>
+        </div>
+        <div class="col player">
+            <div class="card">
+              <div class="card-body" id="card3" onclick="applySpell(2)">
+              </div>
+            </div>
+          </div>
+          <div class="col player">
+            <div class="card">
+              <div class="card-body" id="card2" onclick="applySpell(1)">
+              </div>
+            </div>
+          </div>
+          <div class="col player">
+            <div class="card">
+              <div class="card-body" id="card1" onclick="applySpell(0)">
+                  <p></p>
+                  <p></p>
+              </div>
+            </div>
+          </div>
+        <div class="col enemy">
+          <div class="card">
+            <div class="card-body" id="card01" onclick="applySpell(0, true)" >
+            </div>
+          </div>
+        </div>
+        <div class="col enemy">
+            <div class="card">
+              <div class="card-body" id="card02" onclick="applySpell(1, true)">
+              </div>
+            </div>
+          </div>
+          <div class="col enemy">
+            <div class="card">
+              <div class="card-body" id="card03"  onclick="applySpell(2, true)">
+              </div>
+            </div>
+          </div>
+          <div class="col enemy">
+            <div class="card ">
+              <div class="card-body" id="card04" onclick="applySpell(3, true)" >
+              </div>
+            </div>
+          </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body" id="score2">
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-group" id="hand">
+        <div class="card" id="hand1" onclick="playCard('hand1')"></div>
+        <div class="card" id="hand2" onclick="playCard('hand2')"></div>
+        <div class="card" id="hand3" onclick="playCard('hand3')"></div>
+        <div class="card" id="hand4" onclick="playCard('hand4')"></div>
+        <div class="card" id="hand5" onclick="playCard('hand5')"></div>
+        <div class="card" id="hand6" onclick="playCard('hand6')"></div> 
+    </div>
+    <div class="card-group" id="spells">
+      <div class="card" id="spell1" onclick="selectSpell(0)"></div>
+      <div class="card" id="spell2" onclick="selectSpell(1)"></div>
+      <div class="card" id="spell3" onclick="selectSpell(2)"></div>
+      <div class="card" id="ability" onclick="selectAbility()"></div>
+  </div>
+    <div class="d-grid gap-2">
+        <button type="button" class="btn btn-secondary" onclick="startBattle()">Start Battle</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
